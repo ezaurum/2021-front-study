@@ -2,9 +2,16 @@
 
 클론 코딩 모여서 각자 진행
 
+## 환경
+Vue3 + Typescript
+
+## 실행 날짜
+
 |날짜|내용|
 |:-----|:---------|
 | 2020-01-10 | https://kriss.io/building-medium-clone-with-vue-3 |
+| 2020-01-17 | https://kriss.io/building-medium-clone-with-vue-3 |
+| 2020-01-24 | https://kriss.io/building-medium-clone-with-vue-3 |
 
 # 시작하기
 * NodeJS - https://nodejs.org
