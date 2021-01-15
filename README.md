@@ -23,3 +23,8 @@ Vue3 + Typescript
 1. 노드JS 설치
 2. Yarn 설치
 3. Vue CLI 설치
+
+# 이후 진행 후보
+
+https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/
+https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and-cssgram-24a9f3de0408
