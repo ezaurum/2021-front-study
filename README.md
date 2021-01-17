@@ -12,7 +12,7 @@ Vue3 + Typescript
 |날짜|내용|
 |:-----|:---------|
 | 2020-01-10 | https://kriss.io/building-medium-clone-with-vue-3 |
-| 2020-01-17 | https://kriss.io/building-medium-clone-with-vue-3 |
+| 2020-01-17 | https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/ |
 | 2020-01-24 | https://kriss.io/building-medium-clone-with-vue-3 |
 
 # 시작하기
