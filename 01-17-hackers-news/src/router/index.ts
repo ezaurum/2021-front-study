@@ -14,6 +14,8 @@ const routes: Array<RouteRecordRaw> = [
     path: '/story/:id',
     name: 'Story',
     component: SingleStoryItem,
+    // 주소에서 props 로 값을 넘겨준다
+    // https://router.vuejs.org/guide/essentials/passing-props.html
     props: true,
   },
 ];
