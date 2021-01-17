@@ -1,4 +1,4 @@
-# 2020 Frontend Study
+# 2021 Frontend Study
 
 ## 진행 방식
 클론 코딩 모여서 각자 진행
