@@ -31,3 +31,7 @@ Vue3 + Typescript
 https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/
 
 https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and-cssgram-24a9f3de0408
+
+# 참고 자료
+
+타입 스크립트 - https://www.typescriptlang.org/
