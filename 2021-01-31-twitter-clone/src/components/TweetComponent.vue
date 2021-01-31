@@ -51,32 +51,19 @@ import { Vue } from 'vue-class-component';
 import { Prop } from 'vue-property-decorator';
 
 export default class TwitterComponent extends Vue {
-  @Prop() readonly tweetData!: Tweet;
-
-  tweet: Tweet = {
-    name: '테스트',
-    userImage: 'string',
-    handle: 'string',
-    timeLapsed: 'string',
-    tweetImage: 'Blob | string',
-    description: 'string',
-    likes: 0,
-    upVoted: false,
-  }
-
-  created() {
-    this.tweet = this.tweetData;
-  }
+  @Prop() readonly tweet!: Tweet;
 
   get computedDescription() {
     return this.tweet.description.split(' ').map((word) => (word[0] === '@' || word[0] === '#' ? `<span class="highlighted">${word}</span>` : '')).join(' ');
   }
 
   like() {
-    console.log('like', this);
-    // do nothing
-    // this.tweetData.upVoted ? this.tweetData.likes-- : this.tweetData.likes++;
-    // this.tweetData.upVoted = !this.tweetData.upVoted;
+    // 보통 하위 컴포넌트에서는 메세지만 날려주고 상위 컴포넌트에서 처리합니다.
+    if (this.tweet.upVoted) {
+      this.$emit('voted-down');
+    } else {
+      this.$emit('voted-up');
+    }
   }
 }
 </script>

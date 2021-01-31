@@ -32,8 +32,10 @@
           </div>
           <div class="feed" id="feed" v-if="step === 1" v-dragscroll.y="true">
             <TweetComponent
+              @voted-down="voteDown(idx, $event)"
+              @voted-up="voteUp(idx, $event)"
               v-for="(tweet, idx) in tweets"
-              :tweet-data="tweet"
+              :tweet="tweet"
               :key="idx"
             />
           </div>
@@ -140,7 +142,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Options } from 'vue-class-component';
+import { Options, Vue } from 'vue-class-component';
 import tweetJsonList from '@/assets/tweets.json';
 import TweetComponent from '@/components/TweetComponent.vue';
 import { dragscroll } from 'vue-dragscroll';
@@ -168,6 +170,18 @@ export default class TwitterMain extends Vue {
     setTimeout(() => {
       this.step = 1;
     }, 1000);
+  }
+
+  voteUp(idx: number, ev: any) {
+    const tweet = this.tweets[idx];
+    tweet.upVoted = true;
+    tweet.likes += 1;
+  }
+
+  voteDown(idx: number, ev: any) {
+    const tweet = this.tweets[idx];
+    tweet.upVoted = false;
+    tweet.likes -= 1;
   }
 
   fileUpload(e: any) {
