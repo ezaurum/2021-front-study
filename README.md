@@ -34,6 +34,9 @@ https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and
 아주 심플한 인스타 클론입니다
 https://github.com/harps116/vuestagram
 
+해커스 뉴스 - Vue 3.0에 맞춰진 버전
+https://github.com/raukaute/vue-hackernews-3.0
+
 
 # 참고 자료
 
