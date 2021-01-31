@@ -41,3 +41,19 @@ https://github.com/raukaute/vue-hackernews-3.0
 # 참고 자료
 
 타입 스크립트 - https://www.typescriptlang.org/
+
+# Vue Cli 설정
+```
+ Please pick a preset: Manually select features
+? Check the features needed for your project: Choose Vue version, Babel, TS, Router, Vuex, CSS Pre-processors, Linter
+? Choose a version of Vue.js that you want to start the project with 3.x (Preview)
+? Use class-style component syntax? Yes
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Airbnb
+? Pick additional lint features: Lint on save, Lint and fix on commit
+? Where do you prefer placing config for Babel, ESLint, etc.?
+# In dedicated config files
+  In package.json
+```
