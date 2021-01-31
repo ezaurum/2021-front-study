@@ -13,7 +13,7 @@ Vue3 + Typescript
 |:-----|:---------|
 | 2020-01-10 | https://kriss.io/building-medium-clone-with-vue-3 |
 | 2020-01-17 | https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/ |
-| 2020-01-24 | |
+| 2020-01-31 | https://codepen.io/itslit/pen/MGzGab |
 
 # 시작하기
 * NodeJS - https://nodejs.org
