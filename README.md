@@ -34,8 +34,6 @@ https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and
 아주 심플한 인스타 클론입니다
 https://github.com/harps116/vuestagram
 
-트위터
-https://codepen.io/itslit/pen/MGzGab
 
 # 참고 자료
 
