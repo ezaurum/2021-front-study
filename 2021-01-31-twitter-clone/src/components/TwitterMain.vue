@@ -8,40 +8,43 @@
       </div>
       <div class="top-bar"></div>
       <div class="iphone-screen">
-        <div v-if="!step" class="loading" key="app_transition_1">
-          <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
-        </div>
-        <div v-if="step" class="app" key="app_transition_2">
-          <div class="phone-header">
-            <div v-if="step === 1"
-                 style="border-bottom: 1px solid #e6ecf1; padding-bottom: 10px;">
-              <p>Home</p>
+        <transition name="fade">
+          <div v-if="!step" class="loading" key="app_transition_1">
+            <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div v-if="step" class="app" key="app_transition_2">
+            <div class="phone-header">
+              <div v-if="step === 1"
+                   style="border-bottom: 1px solid #e6ecf1; padding-bottom: 10px;">
+                <p>Home</p>
+                <img class="img-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png"/>
+                <img class="img-2"
+                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tweet_icon.png"
+                     @click="step++"/>
+              </div>
+              <div v-if="step === 2">
+                <i class="fas fa-times" @click="goToHome"></i>
+                <button class="button is-primary is-small"
+                        @click="shareTweet"
+                        :disabled="description === ''">
+                  Tweet
+                </button>
+              </div>
+            </div>
+            <div class="feed" id="feed" v-if="step === 1" v-dragscroll.y="true">
+              <TweetComponent
+                @voted-down="voteDown(idx, $event)"
+                @voted-up="voteUp(idx, $event)"
+                v-for="(tweet, idx) in tweets"
+                :tweet="tweet"
+                :key="idx"
+              />
+            </div>
+            <div class="make-tweet" v-if="step === 2">
               <img class="img-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png"/>
-              <img class="img-2"
-                   src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tweet_icon.png"
-                   @click="step++"/>
-            </div>
-            <div v-if="step === 2">
-              <i class="fas fa-times" @click="goToHome"></i>
-              <button class="button is-primary is-small"
-                      @click="shareTweet"
-                      :disabled="description === ''">
-                Tweet
-              </button>
-            </div>
-          </div>
-          <div class="feed" id="feed" v-if="step === 1" v-dragscroll.y="true">
-            <TweetComponent
-              @voted-down="voteDown(idx, $event)"
-              @voted-up="voteUp(idx, $event)"
-              v-for="(tweet, idx) in tweets"
-              :tweet="tweet"
-              :key="idx"
-            />
-          </div>
-          <div class="make-tweet" v-if="step === 2">
-            <img class="img-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png"/>
-            <div class="caption-container">
+              <div class="caption-container">
                 <textarea
                   placeholder="What's happening?"
                   type="text"
@@ -49,51 +52,52 @@
                   maxlength="280"
                   v-model="description">
                 </textarea>
-              <i></i>
-            </div>
-            <div class="text-limit">
-              {{ description.length }}/280
-              <span class="right">Tag others with
+                <i></i>
+              </div>
+              <div class="text-limit">
+                {{ description.length }}/280
+                <span class="right">Tag others with
                     <span class="highlighted">@</span>
                     and create hashtags with <span
-                  class="highlighted">#</span></span>
+                    class="highlighted">#</span></span>
+              </div>
+              <div class="image-container" v-if="image">
+                <img :src="image" alt=""/>
+                <i class="fas fa-times-circle"
+                   @click="image = ''">
+                </i>
+              </div>
             </div>
-            <div class="image-container" v-if="image">
-              <img :src="image" alt=""/>
-              <i class="fas fa-times-circle"
-                 @click="image = ''">
-              </i>
+            <div class="phone-footer">
+              <div v-if="step === 1" class="step-1">
+                <div class="home-cta" @click="goToHome">
+                  <i class="fas fa-home fa-lg"></i>
+                </div>
+              </div>
+              <div v-if="step === 2" class="step-2">
+                <div class="home-cta" @click="goToHome">
+                  <i class="fas fa-home fa-lg"></i>
+                </div>
+                <div class="upload-cta">
+                  <input type="text"
+                         name="file"
+                         id="file"
+                         class="inputfile"
+                         @change="fileUpload"
+                         v-model="fileInput"
+                         :disabled="step !== 2"/>
+                  <label for="file">
+                    <i class="fas fa-image fa-lg"></i>
+                  </label>
+                </div>
+                <p class="helper-text">Click
+                  <a @click="uploadRandomImage">here for a random image!</a>
+                  or upload your own!
+                  <i class="fas fa-chevron-right"></i></p>
+              </div>
             </div>
           </div>
-          <div class="phone-footer">
-            <div v-if="step === 1" class="step-1">
-              <div class="home-cta" @click="goToHome">
-                <i class="fas fa-home fa-lg"></i>
-              </div>
-            </div>
-            <div v-if="step === 2" class="step-2">
-              <div class="home-cta" @click="goToHome">
-                <i class="fas fa-home fa-lg"></i>
-              </div>
-              <div class="upload-cta">
-                <input type="text"
-                       name="file"
-                       id="file"
-                       class="inputfile"
-                       @change="fileUpload"
-                       v-model="fileInput"
-                       :disabled="step !== 2"/>
-                <label for="file">
-                  <i class="fas fa-image fa-lg"></i>
-                </label>
-              </div>
-              <p class="helper-text">Click
-                <a @click="uploadRandomImage">here for a random image!</a>
-                or upload your own!
-                <i class="fas fa-chevron-right"></i></p>
-            </div>
-          </div>
-        </div>
+        </transition>
       </div>
       <div class="iphone-buttons">
         <span class="on-off"></span>

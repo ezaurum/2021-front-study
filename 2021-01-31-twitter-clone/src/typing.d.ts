@@ -7,6 +7,7 @@ interface Tweet {
   description: string;
   likes: number;
   upVoted: boolean;
+  verified: boolean;
 }
 
 declare module 'vue-dragscroll';

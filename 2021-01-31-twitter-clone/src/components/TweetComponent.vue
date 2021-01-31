@@ -54,10 +54,7 @@ export default class TwitterComponent extends Vue {
   @Prop() readonly tweet!: Tweet;
 
   get computedDescription() {
-    console.log(this.tweet.description);
-    const s = this.tweet.description.split(' ').map((word) => (word[0] === '@' || word[0] === '#' ? `<span class="highlighted">${word}</span>` : word)).join(' ');
-    console.log(s);
-    return s;
+    return this.tweet.description.split(' ').map((word) => (word[0] === '@' || word[0] === '#' ? `<span class="highlighted">${word}</span>` : word)).join(' ');
   }
 
   like() {
