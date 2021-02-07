@@ -34,9 +34,30 @@ https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and
 아주 심플한 인스타 클론입니다
 https://github.com/harps116/vuestagram
 
-트위터
-https://codepen.io/itslit/pen/MGzGab
+해커스 뉴스 - Vue 3.0에 맞춰진 버전
+https://github.com/raukaute/vue-hackernews-3.0
+
+트위터 - 서버 필요
+https://github.com/vue-bootcamp/twitter-clone
+
 
 # 참고 자료
 
 타입 스크립트 - https://www.typescriptlang.org/
+공식 문서 번역 - https://typescript-kr.github.io/
+
+# Vue Cli 설정
+```
+ Please pick a preset: Manually select features
+? Check the features needed for your project: Choose Vue version, Babel, TS, Router, Vuex, CSS Pre-processors, Linter
+? Choose a version of Vue.js that you want to start the project with 3.x (Preview)
+? Use class-style component syntax? Yes
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Airbnb
+? Pick additional lint features: Lint on save, Lint and fix on commit
+? Where do you prefer placing config for Babel, ESLint, etc.?
+# In dedicated config files
+  In package.json
+```
