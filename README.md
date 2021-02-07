@@ -11,9 +11,10 @@ Vue3 + Typescript
 
 |날짜|내용|
 |:-----|:---------|
-| 2020-01-10 | https://kriss.io/building-medium-clone-with-vue-3 |
-| 2020-01-17 | https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/ |
-| 2020-01-31 | https://codepen.io/itslit/pen/MGzGab |
+| 2021-01-10 | https://kriss.io/building-medium-clone-with-vue-3 |
+| 2021-01-17 | https://codesource.io/build-hackernews-clone-with-vuejs-by-consuming-restful-api-with-axios/ |
+| 2021-01-31 | https://codepen.io/itslit/pen/MGzGab |
+| 2021-02-07 | https://github.com/harps116/vuestagram |
 
 # 시작하기
 * NodeJS - https://nodejs.org
@@ -30,9 +31,6 @@ Vue3 + Typescript
 
 인스타그램
 https://medium.com/fullstackio/tutorial-build-an-instagram-clone-with-vue-js-and-cssgram-24a9f3de0408
-
-아주 심플한 인스타 클론입니다
-https://github.com/harps116/vuestagram
 
 해커스 뉴스 - Vue 3.0에 맞춰진 버전
 https://github.com/raukaute/vue-hackernews-3.0
