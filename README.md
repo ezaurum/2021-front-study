@@ -44,6 +44,7 @@ https://github.com/vue-bootcamp/twitter-clone
 # 참고 자료
 
 타입 스크립트 - https://www.typescriptlang.org/
+공식 문서 번역 - https://typescript-kr.github.io/
 
 # Vue Cli 설정
 ```
